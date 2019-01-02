@@ -1,0 +1,7 @@
+{
+  "name": "droppedbox-api",
+  "version": "1.0.0",
+  "description": "Dropped Box API",
+  "main": "index.js",
+  "license": "MIT"
+}

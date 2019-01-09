@@ -1,5 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
+require('dotenv').config();
+
+console.log(process.env.PRINT_ME)
 
 module.exports = {
 

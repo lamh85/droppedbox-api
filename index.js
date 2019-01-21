@@ -1,16 +1,11 @@
-import exportTest from "./app/exportTest.js"
-require('dotenv').config()
+// Libraries
+import express from 'express'
+// Controllers
+import { DropboxController } from './controllers'
 
-console.log("I am from index.js")
-console.log(exportTest)
+const app = express()
+const port = 3000
 
-console.log("I am from index also")
-console.log(process.env.PRINT_ME)
+(new DropboxController(app)).addListeners()
 
-console.log("should be token")
-console.log(process.env.DROPBOX_ACCOUNT_ACCESS_TOKEN)
-
-// let element = document.querySelector("#container")
-// element.innerHTML = "hello from index.js. hooray! something"
-
-const res = await 
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))

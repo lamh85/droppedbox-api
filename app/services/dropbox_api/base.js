@@ -8,15 +8,15 @@ import { DropboxTeam } from 'dropbox'
 dotenv.config()
 
 class DropboxApi {
-  run = ({url, method, body, headers}) => {
+  run({url, method, body, headers}) {
     const dropboxInstance = this.dropboxInstance()
   }
 
-  buildOptions = () => {
+  buildOptions() {
     // do something
   }
   
-  dropboxInstance = () => {
+  dropboxInstance() {
     return new Dropbox({
       fetch,
       accessToken: 'ENTER_TOKEN_HERE'

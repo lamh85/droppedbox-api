@@ -1,10 +1,10 @@
 class DropboxController {
-  constructor({ appInstance }){
-    this.appInstance = appInstance
+  constructor({ app }){
+    this.app = app
   }
 
-  addListeners = appInstance => {
-    appInstance.get('/', (req, res) => res.send('Hello World!'))
+  addListeners() {
+    this.app.get('/', (req, res) => res.send('Hello World!'))
   }
 }
 

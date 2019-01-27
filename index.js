@@ -1,11 +1,13 @@
 // Libraries
-import express from 'express'
+const express = require('express')
+
 // Controllers
-import { DropboxController } from './controllers'
+import { DropboxController } from './app/controllers'
 
 const app = express()
 const port = 3000
 
-(new DropboxController(app)).addListeners()
+const dropboxController = new DropboxController({app})
+dropboxController.addListeners()
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
